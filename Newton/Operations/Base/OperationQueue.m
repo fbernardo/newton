@@ -1,6 +1,6 @@
 //
 //  OperationQueue.m
-//  ObjectiveCOperations
+//  Newton
 //
 //  Created by Fábio Bernardo on 08/10/15.
 //  Copyright © 2015 Subtraction. All rights reserved.
@@ -9,11 +9,34 @@
 #import "OperationQueue.h"
 #import "NSOperation+Newton.h"
 
+static void *KVOOerationQueueContext;
+
 @interface OperationQueue ()
 @property (nonatomic, copy) void (^allOperationsFinishedCompletionBlock)();
 @end
 
 @implementation OperationQueue
+
+#pragma mark - Init/Dealloc
+
+- (void)dealloc {
+    [self removeObserver:self
+              forKeyPath:@"operationCount"
+                 context:&KVOOerationQueueContext
+     ];
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self addObserver:self
+               forKeyPath:@"operationCount"
+                  options:0
+                  context:&KVOOerationQueueContext
+         ];
+    }
+    return self;
+}
 
 #pragma mark - NSOperationQueue
 
@@ -64,14 +87,6 @@
                     [strongSelf.delegate operationQueue:strongSelf operationDidFinish:strongOp];
                 }
             }
-            
-            //Call the finishing block if needed
-            if (strongSelf.operationCount == 0) {
-                void (^block)() = strongSelf.allOperationsFinishedCompletionBlock;
-                if (block) {
-                    block();
-                }
-            }
         }
     }];
 }
@@ -89,6 +104,21 @@
     }
 }
 
-
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary<NSString *,id> *)change
+                      context:(void *)context {
+    if ([keyPath isEqualToString:@"operationCount"] && object == self && context == &KVOOerationQueueContext) {
+        //Call the finishing block if needed
+        if (self.operationCount == 0) {
+            void (^block)() = self.allOperationsFinishedCompletionBlock;
+            if (block) {
+                block();
+            }
+        }
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
 
 @end

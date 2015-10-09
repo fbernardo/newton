@@ -1,6 +1,6 @@
 //
 //  URLSessionTaskOperation.m
-//  ObjectiveCOperations
+//  Newton
 //
 //  Created by Fábio Bernardo on 08/10/15.
 //  Copyright © 2015 Subtraction. All rights reserved.
@@ -32,18 +32,20 @@ static void * kURLSessionTaskOperationKVOContext;
 
 - (instancetype)initWithTask:(NSURLSessionTask *)task {
     NSAssert(task.state == NSURLSessionTaskStateSuspended, @"Task was resumed by something other than %@", self);
-    self = [self init];
+    self = [super init];
     if (self) {
         self.task = task;
     }
     return self;
 }
 
+- (instancetype)init { @throw nil; }
+
 #pragma mark - Operation
 
 - (void)execute {
     if (!self.task) {
-        [self cancelWithError:[NSError errorWithDomain:@"URLSessionTaskOperationDomain" code:0 userInfo:nil]];
+        [self cancelWithError:[NSError errorWithDomain:@"OperationDomain" code:0 userInfo:nil]];
     } else {
         NSAssert(self.task.state == NSURLSessionTaskStateSuspended, @"Task was resumed by something other than %@", self);
         

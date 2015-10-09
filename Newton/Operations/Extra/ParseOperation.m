@@ -1,6 +1,6 @@
 //
 //  ParseOperation.m
-//  ObjectiveCOperations
+//  Newton
 //
 //  Created by Fábio Bernardo on 08/10/15.
 //  Copyright © 2015 Subtraction. All rights reserved.
@@ -23,7 +23,7 @@
 
 - (void)execute {
     if (!self.input) {
-        [self cancelWithError:[NSError errorWithDomain:@"ParseOperationDomain" code:0 userInfo:nil]];
+        [self cancelWithError:[NSError errorWithDomain:@"OperationDomain" code:0 userInfo:nil]];
     } else {
         [super execute];
     }

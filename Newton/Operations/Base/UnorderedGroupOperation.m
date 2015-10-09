@@ -1,22 +1,35 @@
 //
 //  GroupOperation.m
-//  ObjectiveCOperations
+//  Newton
 //
 //  Created by Fábio Bernardo on 08/10/15.
 //  Copyright © 2015 Subtraction. All rights reserved.
 //
 
-#import "GroupOperation.h"
+#import "UnorderedGroupOperation.h"
 #import "OperationQueue.h"
 #import "NSOperationQueue+Newton.h"
 #import "OperationForSubclass.h"
 
-@interface GroupOperation () <OperationQueueDelegate>
+@interface UnorderedGroupOperation () <OperationQueueDelegate>
 @property (nonatomic, strong) OperationQueue *operationQueue;
 @property (nonatomic, strong) NSMutableArray *outputs;
 @end
 
-@implementation GroupOperation
+@implementation UnorderedGroupOperation
+@dynamic operationCount;
+
+#pragma mark - Static Methods
+
++ (NSSet *)keyPathsForValuesAffectingOperationCount {
+    return [NSSet setWithObject:@"operationQueue.operationCount"];
+}
+
+#pragma mark - Properties
+
+- (NSUInteger)operationCount {
+    return self.operationQueue.operationCount;
+}
 
 #pragma mark - Init/Dealloc
 

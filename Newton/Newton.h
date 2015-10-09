@@ -19,9 +19,11 @@ FOUNDATION_EXPORT const unsigned char NewtonVersionString[];
 #import <Newton/OperationQueue.h>
 #import <Newton/Operation.h>
 #import <Newton/BlockOperation.h>
-#import <Newton/GroupOperation.h>
+#import <Newton/UnorderedGroupOperation.h>
+#import <Newton/OrderedGroupOperation.h>
 #import <Newton/NSOperation+Newton.h>
 #import <Newton/NSOperationQueue+Newton.h>
 
 #import <Newton/ParseOperation.h>
 #import <Newton/URLSessionTaskOperation.h>
+#import <Newton/URLRequestTaskOperation.h>

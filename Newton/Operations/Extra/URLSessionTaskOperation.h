@@ -1,6 +1,6 @@
 //
 //  URLSessionTaskOperation.h
-//  ObjectiveCOperations
+//  Newton
 //
 //  Created by Fábio Bernardo on 08/10/15.
 //  Copyright © 2015 Subtraction. All rights reserved.
@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong, nullable) NSURLSessionTask *task;
 
 + (instancetype)newWithTask:(NSURLSessionTask *)task;
-- (instancetype)initWithTask:(NSURLSessionTask *)task;
+- (instancetype)initWithTask:(NSURLSessionTask *)task NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
