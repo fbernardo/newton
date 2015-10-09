@@ -11,10 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^BlockOperationCancelHandler)(NSError *error);
+
 @interface BlockOperation : Operation
 
-+ (instancetype)newWithBlock:(id __nullable (^)(id __nullable input))block;
-- (instancetype)initWithBlock:(id __nullable (^)(id __nullable input))block;
++ (instancetype)newWithBlock:(id __nullable (^)(id __nullable input, BlockOperationCancelHandler cancelHandler))block;
+- (instancetype)initWithBlock:(id __nullable (^)(id __nullable input, BlockOperationCancelHandler cancelHandler))block;
 
 @end
 

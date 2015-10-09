@@ -17,11 +17,11 @@
 
 #pragma mark - Init/Dealloc
 
-+ (instancetype)newWithBlock:(id (^)(id))block {
++ (instancetype)newWithBlock:(id (^)(id,BlockOperationCancelHandler))block {
     return [[self alloc] initWithBlock:block];
 }
 
-- (instancetype)initWithBlock:(id (^)(id))block {
+- (instancetype)initWithBlock:(id (^)(id,BlockOperationCancelHandler))block {
     self = [super init];
     if (self) {
         _block = [block copy];
@@ -32,7 +32,10 @@
 #pragma mark - Operation
 
 -(void)execute {
-    [self finishWithOutput:self.block(self.input)];
+    __weak typeof(self) weakSelf = self;
+    [self finishWithOutput:self.block(self.input, ^(NSError *error){
+        [weakSelf cancelWithError:error];
+    })];
 }
 
 @end

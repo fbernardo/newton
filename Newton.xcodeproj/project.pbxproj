@@ -21,8 +21,6 @@
 		3FE0673D1BC6BBFD00FDEB75 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673F1BC6BBFD00FDEB75 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; settings = {ASSET_TAGS = (); }; };
-		3FE067401BC6BBFD00FDEB75 /* ParseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672F1BC6BBFD00FDEB75 /* ParseOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067411BC6BBFD00FDEB75 /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067301BC6BBFD00FDEB75 /* ParseOperation.m */; settings = {ASSET_TAGS = (); }; };
 		3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067431BC6BBFD00FDEB75 /* URLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */; settings = {ASSET_TAGS = (); }; };
 		3FE067FE1BC6D0C600FDEB75 /* URLRequestTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,8 +46,6 @@
 		3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationForSubclass.h; sourceTree = "<group>"; };
 		3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationQueue.h; sourceTree = "<group>"; };
 		3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationQueue.m; sourceTree = "<group>"; };
-		3FE0672F1BC6BBFD00FDEB75 /* ParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
-		3FE067301BC6BBFD00FDEB75 /* ParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseOperation.m; sourceTree = "<group>"; };
 		3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionTaskOperation.h; sourceTree = "<group>"; };
 		3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionTaskOperation.m; sourceTree = "<group>"; };
 		3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestTaskOperation.h; sourceTree = "<group>"; };
@@ -137,8 +133,6 @@
 		3FE0672E1BC6BBFD00FDEB75 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				3FE0672F1BC6BBFD00FDEB75 /* ParseOperation.h */,
-				3FE067301BC6BBFD00FDEB75 /* ParseOperation.m */,
 				3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */,
 				3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */,
 				3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */,
@@ -164,7 +158,6 @@
 				3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */,
 				3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */,
 				3FE067371BC6BBFD00FDEB75 /* BlockOperation.h in Headers */,
-				3FE067401BC6BBFD00FDEB75 /* ParseOperation.h in Headers */,
 				3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,7 +235,6 @@
 				3FE0673A1BC6BBFD00FDEB75 /* UnorderedGroupOperation.m in Sources */,
 				3FE0673C1BC6BBFD00FDEB75 /* Operation.m in Sources */,
 				3FE067361BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m in Sources */,
-				3FE067411BC6BBFD00FDEB75 /* ParseOperation.m in Sources */,
 				3FE067381BC6BBFD00FDEB75 /* BlockOperation.m in Sources */,
 				3FE0673F1BC6BBFD00FDEB75 /* OperationQueue.m in Sources */,
 				3FE067431BC6BBFD00FDEB75 /* URLSessionTaskOperation.m in Sources */,
