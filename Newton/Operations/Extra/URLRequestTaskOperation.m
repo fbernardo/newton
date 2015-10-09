@@ -64,7 +64,7 @@
             }
         }];
     } else {
-        [self cancelWithError:[NSError errorWithDomain:@"OperationDomain" code:0 userInfo:nil]];
+        [self cancelWithError:nil];
     }
 }
 

@@ -45,7 +45,7 @@ static void * kURLSessionTaskOperationKVOContext;
 
 - (void)execute {
     if (!self.task) {
-        [self cancelWithError:[NSError errorWithDomain:@"OperationDomain" code:0 userInfo:nil]];
+        [self cancelWithError:nil];
     } else {
         NSAssert(self.task.state == NSURLSessionTaskStateSuspended, @"Task was resumed by something other than %@", self);
         

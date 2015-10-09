@@ -48,11 +48,7 @@ typedef NS_ENUM(NSUInteger, OperationState) {
     for (NSOperation *dependency in dependencies) {
         [self removeDependency:dependency];
         if ([dependency isCancelled] && ![self isCancelled]) {
-            if ([dependency isKindOfClass:[Operation class]] && ((Operation *)dependency).error) {
-                [self cancelWithError:((Operation *)dependency).error];
-            } else {
-                [self cancel];
-            }
+            [self cancelWithError:[dependency isKindOfClass:[Operation class]] ? ((Operation *)dependency).error : nil];
         }
     }
     
@@ -76,10 +72,13 @@ typedef NS_ENUM(NSUInteger, OperationState) {
 #pragma mark - Public Methods
 
 - (void)cancelWithError:(NSError *)error  {
-    NSParameterAssert(error != nil);
-    NSAssert(![self isCancelled], @"Cancelling multiple times");
+    if ([self isCancelled]) {
+        return;
+    }
     self.error = error;
     [self cancel];
+    
+    NSAssert([self isCancelled], @"right after calling cancel this should be true");
 }
 
 - (void)addInputDependency:(Operation *)operation {

@@ -71,8 +71,8 @@
 #pragma mark - NSOperation
 
 - (void)cancel {
-    [self.operationQueue cancelAllOperations];
     [super cancel];
+    [self.operationQueue cancelAllOperations];
 }
 
 -(void)execute {
@@ -93,6 +93,11 @@
 }
 
 #pragma mark - OperationQueueDelegate
+
+- (void)operationQueue:(OperationQueue *)operationQueue operationDidCancel:(NSOperation *)operation {
+    NSError *error = [operation isKindOfClass:[Operation class]] ? ((Operation *)operation).error : nil;    
+    [self cancelWithError:error];
+}
 
 - (void)operationQueue:(OperationQueue *)operationQueue operationDidFinish:(NSOperation *)operation {
     if ([operation isKindOfClass:[Operation class]]) {

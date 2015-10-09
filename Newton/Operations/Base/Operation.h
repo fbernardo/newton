@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, readonly, strong) id output;
 @property (nullable, nonatomic, strong) id input;
 
-- (void)cancelWithError:(NSError *)error;
+- (void)cancelWithError:(nullable NSError *)error;
 - (void)addInputDependency:(Operation *)operation;
 
 @end
