@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UnorderedGroupOperation : Operation
 
-+ (instancetype)groupWithOperations:(NSArray<NSOperation *> *)operations;
++ (instancetype)newWithOperations:(NSArray<NSOperation *> *)operations;
 - (instancetype)initWithOperations:(NSArray<NSOperation *> *)operations;
 
 - (void)addOperation:(NSOperation *)operation;

@@ -33,7 +33,7 @@
 
 #pragma mark - Init/Dealloc
 
-+ (instancetype)groupWithOperations:(NSArray<NSOperation *> *)operations {
++ (instancetype)newWithOperations:(NSArray<NSOperation *> *)operations {
     return [[self alloc] initWithOperations:operations];
 }
 

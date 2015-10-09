@@ -39,6 +39,10 @@
 
 #pragma mark - Init/Dealloc
 
++ (instancetype)newWithSession:(NSURLSession *)session {
+    return [[self alloc] initWithSession:session];
+}
+
 - (instancetype)initWithSession:(NSURLSession *)session {
     self = [super init];
     if (self) {

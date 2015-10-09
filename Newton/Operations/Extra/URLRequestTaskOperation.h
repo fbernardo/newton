@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface URLRequestTaskOperation : Operation
 
++ (instancetype)newWithSession:(NSURLSession *)session;
 - (instancetype)initWithSession:(NSURLSession *)session NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
