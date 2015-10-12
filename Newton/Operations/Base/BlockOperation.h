@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^BlockOperationCancelHandler)(NSError *error);
+typedef void (^BlockOperationCancelHandler)(NSError * __nullable error);
 
 @interface BlockOperation : Operation
 

@@ -14,6 +14,7 @@
 @interface OrderedGroupOperation () <OperationQueueDelegate>
 @property (nonatomic, strong) OperationQueue *operationQueue;
 @property (nonatomic, strong) id lastOutput;
+@property (nonatomic, weak) NSOperation *lastAddedOperation;
 @end
 
 @implementation OrderedGroupOperation
@@ -52,6 +53,8 @@
             }
             
         }
+        
+        self.lastAddedOperation = [operations lastObject];
         [self.operationQueue addOperations:operations];
     }
     return self;
@@ -66,6 +69,27 @@
         _operationQueue = operationQueue;
     }
     return self;
+}
+
+#pragma mark - Public Methods
+
+- (void)addOperation:(NSOperation *)operation {
+    NSAssert(![self isFinished] && ![self isCancelled], @"Can't add operations to a group that already finished.");
+    
+    NSOperation *firstOperation = self.lastAddedOperation;
+    self.lastAddedOperation = operation;
+    
+    if (firstOperation) {
+        NSOperation *secondOperation = operation;
+        
+        if ([firstOperation isKindOfClass:[Operation class]] && [secondOperation isKindOfClass:[Operation class]]) {
+            [(Operation *)secondOperation addInputDependency:(Operation *)firstOperation];
+        } else {
+            [secondOperation addDependency:firstOperation];
+        }
+    }
+    
+    [self.operationQueue addOperation:operation];
 }
 
 #pragma mark - NSOperation

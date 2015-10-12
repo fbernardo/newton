@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSUInteger operationCount;
 
+- (void)addOperation:(NSOperation *)operation;
+
 @end
 
 NS_ASSUME_NONNULL_END

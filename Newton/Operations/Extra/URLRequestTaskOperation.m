@@ -67,6 +67,8 @@
                 [weakSelf cancelWithError:error];
             }
         }];
+        
+        [self.task resume];
     } else {
         [self cancelWithError:nil];
     }
