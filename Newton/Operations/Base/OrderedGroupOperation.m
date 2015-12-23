@@ -45,8 +45,8 @@
             NSOperation *firstOperation = operations[i-1];
             NSOperation *secondOperation = operations[i];
             
-            if ([firstOperation isKindOfClass:[Operation class]] &&
-                [secondOperation isKindOfClass:[Operation class]]) {
+            //If both operations are of type Operation and the second one has no input, assume it wants the input from the first.
+            if ([firstOperation isKindOfClass:[Operation class]] && [secondOperation isKindOfClass:[Operation class]] && !((Operation *)secondOperation).input) {
                 [(Operation *)secondOperation addInputDependency:(Operation *)firstOperation];
             } else {
                 [secondOperation addDependency:firstOperation];
@@ -82,7 +82,8 @@
     if (firstOperation) {
         NSOperation *secondOperation = operation;
         
-        if ([firstOperation isKindOfClass:[Operation class]] && [secondOperation isKindOfClass:[Operation class]]) {
+        //If both operations are of type Operation and the second one has no input, assume it wants the input from the first.
+        if ([firstOperation isKindOfClass:[Operation class]] && [secondOperation isKindOfClass:[Operation class]] && !((Operation *)secondOperation).input) {
             [(Operation *)secondOperation addInputDependency:(Operation *)firstOperation];
         } else {
             [secondOperation addDependency:firstOperation];
@@ -101,7 +102,7 @@
 
 -(void)execute {
     NSOperation *firstOperation = self.operationQueue.operations.firstObject;
-    if ([firstOperation isKindOfClass:[Operation class]]) {
+    if ([firstOperation isKindOfClass:[Operation class]] && !((Operation *) firstOperation).input) {
         ((Operation *) firstOperation).input = self.input;
     }
     
