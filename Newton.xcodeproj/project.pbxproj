@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; settings = {ASSET_TAGS = (); }; };
+		3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
 		3FE067351BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067211BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067361BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067221BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m */; settings = {ASSET_TAGS = (); }; };
+		3FE067361BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067221BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m */; };
 		3FE067371BC6BBFD00FDEB75 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067381BC6BBFD00FDEB75 /* BlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE067381BC6BBFD00FDEB75 /* BlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */; };
 		3FE067391BC6BBFD00FDEB75 /* UnorderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067271BC6BBFD00FDEB75 /* UnorderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE0673A1BC6BBFD00FDEB75 /* UnorderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE0673A1BC6BBFD00FDEB75 /* UnorderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */; };
 		3FE0673B1BC6BBFD00FDEB75 /* Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067291BC6BBFD00FDEB75 /* Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE0673C1BC6BBFD00FDEB75 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672A1BC6BBFD00FDEB75 /* Operation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE0673C1BC6BBFD00FDEB75 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672A1BC6BBFD00FDEB75 /* Operation.m */; };
 		3FE0673D1BC6BBFD00FDEB75 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE0673F1BC6BBFD00FDEB75 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; settings = {ASSET_TAGS = (); }; };
+		3FE0673F1BC6BBFD00FDEB75 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; };
 		3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067431BC6BBFD00FDEB75 /* URLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE067431BC6BBFD00FDEB75 /* URLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */; };
 		3FE067FE1BC6D0C600FDEB75 /* URLRequestTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067FF1BC6D0C600FDEB75 /* URLRequestTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE067FF1BC6D0C600FDEB75 /* URLRequestTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */; };
 		3FE068021BC733BD00FDEB75 /* OrderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE068001BC733BD00FDEB75 /* OrderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE068031BC733BD00FDEB75 /* OrderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE068031BC733BD00FDEB75 /* OrderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -261,7 +261,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -308,7 +307,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -335,6 +333,7 @@
 		3FE0671C1BC6BBBB00FDEB75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -351,6 +350,7 @@
 		3FE0671D1BC6BBBB00FDEB75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
