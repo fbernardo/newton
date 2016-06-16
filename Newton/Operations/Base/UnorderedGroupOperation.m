@@ -83,7 +83,7 @@
 }
 
 -(void)execute {
-    self.operationQueue.suspended = false;
+    self.operationQueue.suspended = NO;
     __weak typeof(self) weakSelf = self;
     [self.operationQueue waitUntilAllOperationsAreFinishedWithCompletion:^{
         [weakSelf finishWithOutput:[self.outputs copy]];

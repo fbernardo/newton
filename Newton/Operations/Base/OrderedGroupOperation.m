@@ -106,7 +106,7 @@
         ((Operation *) firstOperation).input = self.input;
     }
     
-    self.operationQueue.suspended = false;
+    self.operationQueue.suspended = NO;
     
     __weak typeof(self) weakSelf = self;
     [self.operationQueue waitUntilAllOperationsAreFinishedWithCompletion:^{
