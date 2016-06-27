@@ -13,6 +13,8 @@ static void *KVOOerationQueueContext;
 
 @interface OperationQueue ()
 @property (nonatomic, copy) void (^allOperationsFinishedCompletionBlock)();
+@property (nonatomic) BOOL hasFinished;
+@property (nonatomic, strong) dispatch_queue_t dispatchQueue;
 @end
 
 @implementation OperationQueue
@@ -29,9 +31,11 @@ static void *KVOOerationQueueContext;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        _dispatchQueue = dispatch_queue_create("ABC", DISPATCH_QUEUE_SERIAL);
+        
         [self addObserver:self
                forKeyPath:@"operationCount"
-                  options:0
+                  options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew
                   context:&KVOOerationQueueContext
          ];
     }
@@ -104,18 +108,44 @@ static void *KVOOerationQueueContext;
     }
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath
+- (void)operationCountDidChange:(BOOL)isGoingToZero isComingFromZero:(BOOL)isComingFromZero {
+    BOOL hasFinished = self.hasFinished;
+    BOOL hasCompleted = !hasFinished && isGoingToZero;
+    BOOL hasStarted = hasFinished && isComingFromZero;
+    
+    if (hasCompleted) {
+        hasFinished = YES;
+    } else if (hasStarted) {
+        hasFinished = NO;
+    }
+    
+    self.hasFinished = hasFinished;
+
+    if (hasCompleted) {
+        void (^block)() = self.allOperationsFinishedCompletionBlock;
+        if (block) {
+            block();
+        }
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary<NSString *,id> *)change
                       context:(void *)context {
     if ([keyPath isEqualToString:@"operationCount"] && object == self && context == &KVOOerationQueueContext) {
         //Call the finishing block if needed
-        if (self.operationCount == 0) {
-            void (^block)() = self.allOperationsFinishedCompletionBlock;
-            if (block) {
-                block();
-            }
+        
+        BOOL isGoingToZero = [change[NSKeyValueChangeNewKey] integerValue] == 0;
+        BOOL isComingFromZero = [change[NSKeyValueChangeOldKey] integerValue] == 0;
+
+        if (!isComingFromZero && !isGoingToZero) {
+            return;
         }
+        
+        dispatch_async(self.dispatchQueue, ^{
+            [self operationCountDidChange:isGoingToZero isComingFromZero:isComingFromZero];
+        });
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }

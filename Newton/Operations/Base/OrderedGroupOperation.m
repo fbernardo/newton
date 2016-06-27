@@ -106,8 +106,6 @@
         ((Operation *) firstOperation).input = self.input;
     }
     
-    self.operationQueue.suspended = NO;
-    
     __weak typeof(self) weakSelf = self;
     [self.operationQueue waitUntilAllOperationsAreFinishedWithCompletion:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -115,6 +113,8 @@
             [strongSelf finishWithOutput:strongSelf.lastOutput];
         }
     }];
+    
+    self.operationQueue.suspended = NO;
 }
 
 #pragma mark - OperationQueueDelegate
