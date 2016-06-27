@@ -106,6 +106,8 @@ typedef NS_ENUM(NSUInteger, OperationState) {
 }
 
 - (void)finishWithOutput:(id)output {
+    if (self.state == OperationStateFinished) return;
+    
     self.output = output;
     
     //Execute the completion block *BEFORE* notifying observers that the task has finished, which makes the queue move along.
