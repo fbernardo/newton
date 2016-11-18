@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3FE067121BC6BBBB00FDEB75"
+               BlueprintIdentifier = "3F2364F41DDF606500238895"
                BuildableName = "Newton.framework"
-               BlueprintName = "Newton"
+               BlueprintName = "Newton (macOS)"
                ReferencedContainer = "container:Newton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3FE067121BC6BBBB00FDEB75"
+            BlueprintIdentifier = "3F2364F41DDF606500238895"
             BuildableName = "Newton.framework"
-            BlueprintName = "Newton"
+            BlueprintName = "Newton (macOS)"
             ReferencedContainer = "container:Newton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3FE067121BC6BBBB00FDEB75"
+            BlueprintIdentifier = "3F2364F41DDF606500238895"
             BuildableName = "Newton.framework"
-            BlueprintName = "Newton"
+            BlueprintName = "Newton (macOS)"
             ReferencedContainer = "container:Newton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

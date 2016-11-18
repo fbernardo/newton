@@ -4,14 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Newton.xcscheme</key>
+		<key>Newton (macOS).xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Newton.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3F2364F41DDF606500238895</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3FE067121BC6BBBB00FDEB75</key>
 		<dict>
 			<key>primary</key>
