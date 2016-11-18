@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2364F61DDF606500238895 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
+		3F2364F71DDF606500238895 /* OrderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */; };
+		3F2364F81DDF606500238895 /* URLRequestTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */; };
+		3F2364F91DDF606500238895 /* UnorderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */; };
+		3F2364FA1DDF606500238895 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672A1BC6BBFD00FDEB75 /* Operation.m */; };
+		3F2364FB1DDF606500238895 /* NSOperationQueue+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067221BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m */; };
+		3F2364FC1DDF606500238895 /* BlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */; };
+		3F2364FD1DDF606500238895 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; };
+		3F2364FE1DDF606500238895 /* URLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */; };
+		3F2365011DDF606500238895 /* Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067291BC6BBFD00FDEB75 /* Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365021DDF606500238895 /* NSOperationQueue+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067211BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365031DDF606500238895 /* URLRequestTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365041DDF606500238895 /* OrderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE068001BC733BD00FDEB75 /* OrderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365051DDF606500238895 /* UnorderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067271BC6BBFD00FDEB75 /* UnorderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365061DDF606500238895 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365071DDF606500238895 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365081DDF606500238895 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2365091DDF606500238895 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F23650A1DDF606500238895 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
@@ -30,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2365101DDF606500238895 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2365171DDF60D300238895 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
 		3FE067131BC6BBBB00FDEB75 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE067161BC6BBBB00FDEB75 /* Newton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Newton.h; sourceTree = "<group>"; };
 		3FE067181BC6BBBB00FDEB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F2364FF1DDF606500238895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE0670F1BC6BBBB00FDEB75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE067131BC6BBBB00FDEB75 /* Newton.framework */,
+				3F2365101DDF606500238895 /* Newton.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +118,7 @@
 				3FE067231BC6BBFD00FDEB75 /* Operations */,
 				3FE067161BC6BBBB00FDEB75 /* Newton.h */,
 				3FE067181BC6BBBB00FDEB75 /* Info.plist */,
+				3F2365171DDF60D300238895 /* Info-OSX.plist */,
 			);
 			path = Newton;
 			sourceTree = "<group>";
@@ -144,6 +175,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3F2365001DDF606500238895 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2365011DDF606500238895 /* Operation.h in Headers */,
+				3F2365021DDF606500238895 /* NSOperationQueue+Newton.h in Headers */,
+				3F2365031DDF606500238895 /* URLRequestTaskOperation.h in Headers */,
+				3F2365041DDF606500238895 /* OrderedGroupOperation.h in Headers */,
+				3F2365051DDF606500238895 /* UnorderedGroupOperation.h in Headers */,
+				3F2365061DDF606500238895 /* NSOperation+Newton.h in Headers */,
+				3F2365071DDF606500238895 /* URLSessionTaskOperation.h in Headers */,
+				3F2365081DDF606500238895 /* OperationQueue.h in Headers */,
+				3F2365091DDF606500238895 /* BlockOperation.h in Headers */,
+				3F23650A1DDF606500238895 /* Newton.h in Headers */,
+				3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE067101BC6BBBB00FDEB75 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +214,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3F2364F41DDF606500238895 /* Newton (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F23650D1DDF606500238895 /* Build configuration list for PBXNativeTarget "Newton (macOS)" */;
+			buildPhases = (
+				3F2364F51DDF606500238895 /* Sources */,
+				3F2364FF1DDF606500238895 /* Frameworks */,
+				3F2365001DDF606500238895 /* Headers */,
+				3F23650C1DDF606500238895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Newton (macOS)";
+			productName = Newton;
+			productReference = 3F2365101DDF606500238895 /* Newton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		3FE067121BC6BBBB00FDEB75 /* Newton */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE0671B1BC6BBBB00FDEB75 /* Build configuration list for PBXNativeTarget "Newton" */;
@@ -210,11 +277,19 @@
 			projectRoot = "";
 			targets = (
 				3FE067121BC6BBBB00FDEB75 /* Newton */,
+				3F2364F41DDF606500238895 /* Newton (macOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F23650C1DDF606500238895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE067111BC6BBBB00FDEB75 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +300,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F2364F51DDF606500238895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2364F61DDF606500238895 /* NSOperation+Newton.m in Sources */,
+				3F2364F71DDF606500238895 /* OrderedGroupOperation.m in Sources */,
+				3F2364F81DDF606500238895 /* URLRequestTaskOperation.m in Sources */,
+				3F2364F91DDF606500238895 /* UnorderedGroupOperation.m in Sources */,
+				3F2364FA1DDF606500238895 /* Operation.m in Sources */,
+				3F2364FB1DDF606500238895 /* NSOperationQueue+Newton.m in Sources */,
+				3F2364FC1DDF606500238895 /* BlockOperation.m in Sources */,
+				3F2364FD1DDF606500238895 /* OperationQueue.m in Sources */,
+				3F2364FE1DDF606500238895 /* URLSessionTaskOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE0670E1BC6BBBB00FDEB75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +335,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3F23650E1DDF606500238895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Newton/Info-OSX.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.subtraction.Newton;
+				PRODUCT_NAME = Newton;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3F23650F1DDF606500238895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Newton/Info-OSX.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.subtraction.Newton;
+				PRODUCT_NAME = Newton;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		3FE067191BC6BBBB00FDEB75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,6 +494,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F23650D1DDF606500238895 /* Build configuration list for PBXNativeTarget "Newton (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F23650E1DDF606500238895 /* Debug */,
+				3F23650F1DDF606500238895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3FE0670D1BC6BBBB00FDEB75 /* Build configuration list for PBXProject "Newton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
