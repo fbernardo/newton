@@ -1,0 +1,6 @@
+framework module Newton {
+    umbrella header "Newton.h"
+    header "OperationForSubclass.h"
+    export *
+    module * { export * }
+}

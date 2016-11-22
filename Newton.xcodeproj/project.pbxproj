@@ -26,7 +26,7 @@
 		3F2365081DDF606500238895 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F2365091DDF606500238895 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F23650A1DDF606500238895 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
@@ -38,7 +38,7 @@
 		3FE0673A1BC6BBFD00FDEB75 /* UnorderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */; };
 		3FE0673B1BC6BBFD00FDEB75 /* Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067291BC6BBFD00FDEB75 /* Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673C1BC6BBFD00FDEB75 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672A1BC6BBFD00FDEB75 /* Operation.m */; };
-		3FE0673D1BC6BBFD00FDEB75 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3FE0673D1BC6BBFD00FDEB75 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673F1BC6BBFD00FDEB75 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; };
 		3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +52,7 @@
 /* Begin PBXFileReference section */
 		3F2365101DDF606500238895 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2365171DDF60D300238895 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
+		3F7C12BB1DE36EEC00733A7F /* Newton.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Newton.modulemap; sourceTree = "<group>"; };
 		3FE067131BC6BBBB00FDEB75 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE067161BC6BBBB00FDEB75 /* Newton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Newton.h; sourceTree = "<group>"; };
 		3FE067181BC6BBBB00FDEB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 				3FE067161BC6BBBB00FDEB75 /* Newton.h */,
 				3FE067181BC6BBBB00FDEB75 /* Info.plist */,
 				3F2365171DDF60D300238895 /* Info-OSX.plist */,
+				3F7C12BB1DE36EEC00733A7F /* Newton.modulemap */,
 			);
 			path = Newton;
 			sourceTree = "<group>";
@@ -410,6 +412,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Newton/Newton.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -452,6 +455,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Newton/Newton.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
