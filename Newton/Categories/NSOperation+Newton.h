@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSOperation (Newton)
 
-- (void)addCompletionBlock:(void (^)())completionBlock;
+- (void)addCompletionBlock:(void (^)(void))completionBlock;
 
 - (void)addDependencies:(NSArray<NSOperation *> *)dependencies;
 

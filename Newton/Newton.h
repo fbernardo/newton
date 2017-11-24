@@ -14,8 +14,6 @@ FOUNDATION_EXPORT double NewtonVersionNumber;
 //! Project version string for Newton.
 FOUNDATION_EXPORT const unsigned char NewtonVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <Newton/PublicHeader.h>
-
 #import <Newton/OperationQueue.h>
 #import <Newton/Operation.h>
 #import <Newton/BlockOperation.h>
@@ -26,3 +24,5 @@ FOUNDATION_EXPORT const unsigned char NewtonVersionString[];
 
 #import <Newton/URLSessionTaskOperation.h>
 #import <Newton/URLRequestTaskOperation.h>
+#import <Newton/DownloadTaskOperation.h>
+

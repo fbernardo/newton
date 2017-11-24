@@ -1,35 +1,35 @@
 //
-//  URLRequestTaskOperation.m
+//  DownloadTaskOperation.m
 //  Newton
 //
-//  Created by Fábio Bernardo on 08/10/15.
-//  Copyright © 2015 Subtraction. All rights reserved.
+//  Created by Fábio Bernardo on 24/11/2017.
+//  Copyright © 2017 Subtraction. All rights reserved.
 //
 
-#import "URLRequestTaskOperation.h"
+#import "DownloadTaskOperation.h"
 #import "OperationForSubclass.h"
 
-@interface URLRequestTaskOperationResult ()
-+ (URLRequestTaskOperationResult *)resultWithData:(NSData *)data response:(NSURLResponse *)response;
+@interface DownloadTaskOperationResult ()
++ (DownloadTaskOperationResult *)resultWithURL:(NSURL *)fileURL response:(NSURLResponse *)response;
 @end
 
-@implementation URLRequestTaskOperationResult
+@implementation DownloadTaskOperationResult
 
-+ (URLRequestTaskOperationResult *)resultWithData:(NSData *)data response:(NSURLResponse *)response {
-    URLRequestTaskOperationResult *result = [[self alloc] init];
-    result.data = data;
++ (DownloadTaskOperationResult *)resultWithURL:(NSURL *)fileURL response:(NSURLResponse *)response {
+    DownloadTaskOperationResult *result = [self new];
+    result.temporaryFileURL = fileURL;
     result.response = response;
     return result;
 }
 
 @end
 
-@interface URLRequestTaskOperation ()
+@interface DownloadTaskOperation ()
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) NSURLSessionDataTask *task;
 @end
 
-@implementation URLRequestTaskOperation
+@implementation DownloadTaskOperation
 
 #pragma mark - Properties
 
@@ -56,14 +56,21 @@
 
 #pragma mark - Operation
 
+- (void)cancel {
+    if (self.task.state == NSURLSessionTaskStateRunning) {
+        [self.task cancel];
+    }
+    [super cancel];
+}
+
 -(void)execute {
     NSAssert(self.task == nil, @"Task should be nil when %@ starts executing", [self class]);
     
     if (self.input) {
         __weak typeof(self) weakSelf = self;
-        self.task = [self.session dataTaskWithRequest:self.input completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            if (data && response) {
-                [weakSelf finishWithOutput:[URLRequestTaskOperationResult resultWithData:data response:response]];
+        self.task = [self.session downloadTaskWithRequest:self.input completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (location && response) {
+                [weakSelf finishWithOutput:[DownloadTaskOperationResult resultWithURL:location response:response]];
             } else {
                 [weakSelf cancelWithError:error];
             }
@@ -74,5 +81,6 @@
         [self cancelWithError:nil];
     }
 }
+
 
 @end

@@ -1,9 +1,9 @@
 //
-//  URLRequestTaskOperation.h
+//  DownloadTaskOperation.h
 //  Newton
 //
-//  Created by Fábio Bernardo on 08/10/15.
-//  Copyright © 2015 Subtraction. All rights reserved.
+//  Created by Fábio Bernardo on 24/11/2017.
+//  Copyright © 2017 Subtraction. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,17 +11,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface URLRequestTaskOperationResult : NSObject
-@property (nullable, nonatomic, strong) NSData *data;
+@interface DownloadTaskOperationResult : NSObject
+@property (nullable, nonatomic, strong) NSURL *temporaryFileURL;
 @property (nullable, nonatomic, strong) NSURLResponse *response;
 @end
 
-
-@interface URLRequestTaskOperation : Operation
+@interface DownloadTaskOperation : Operation
 
 + (instancetype)newWithSession:(NSURLSession *)session;
 - (instancetype)initWithSession:(NSURLSession *)session NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
+
 
 @end
 

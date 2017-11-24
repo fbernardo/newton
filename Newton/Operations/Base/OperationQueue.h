@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, weak) id<OperationQueueDelegate> delegate;
 
-- (void)waitUntilAllOperationsAreFinishedWithCompletion:(void (^)())completionBlock;
+- (void)waitUntilAllOperationsAreFinishedWithCompletion:(void (^)(void))completionBlock;
 
 @end
 

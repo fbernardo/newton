@@ -27,6 +27,10 @@
 		3F2365091DDF606500238895 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F23650A1DDF606500238895 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2DB5AE1FC7A25500593A7B /* DownloadTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2DB5AF1FC7A25500593A7B /* DownloadTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */; };
+		3F2DB5B01FC7A3CD00593A7B /* DownloadTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2DB5DB1FC7A50500593A7B /* DownloadTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */; };
 		3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
@@ -52,6 +56,8 @@
 /* Begin PBXFileReference section */
 		3F2365101DDF606500238895 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2365171DDF60D300238895 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
+		3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTaskOperation.h; sourceTree = "<group>"; };
+		3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTaskOperation.m; sourceTree = "<group>"; };
 		3F7C12BB1DE36EEC00733A7F /* Newton.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Newton.modulemap; sourceTree = "<group>"; };
 		3FE067131BC6BBBB00FDEB75 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE067161BC6BBBB00FDEB75 /* Newton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Newton.h; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 			children = (
 				3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */,
 				3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */,
+				3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */,
+				3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */,
 				3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */,
 				3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */,
 			);
@@ -186,6 +194,7 @@
 				3F2365031DDF606500238895 /* URLRequestTaskOperation.h in Headers */,
 				3F2365041DDF606500238895 /* OrderedGroupOperation.h in Headers */,
 				3F2365051DDF606500238895 /* UnorderedGroupOperation.h in Headers */,
+				3F2DB5B01FC7A3CD00593A7B /* DownloadTaskOperation.h in Headers */,
 				3F2365061DDF606500238895 /* NSOperation+Newton.h in Headers */,
 				3F2365071DDF606500238895 /* URLSessionTaskOperation.h in Headers */,
 				3F2365081DDF606500238895 /* OperationQueue.h in Headers */,
@@ -204,6 +213,7 @@
 				3FE067FE1BC6D0C600FDEB75 /* URLRequestTaskOperation.h in Headers */,
 				3FE068021BC733BD00FDEB75 /* OrderedGroupOperation.h in Headers */,
 				3FE067391BC6BBFD00FDEB75 /* UnorderedGroupOperation.h in Headers */,
+				3F2DB5AE1FC7A25500593A7B /* DownloadTaskOperation.h in Headers */,
 				3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */,
 				3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */,
 				3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */,
@@ -258,7 +268,7 @@
 		3FE0670A1BC6BBBB00FDEB75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Subtraction;
 				TargetAttributes = {
 					3FE067121BC6BBBB00FDEB75 = {
@@ -306,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2DB5DB1FC7A50500593A7B /* DownloadTaskOperation.m in Sources */,
 				3F2364F61DDF606500238895 /* NSOperation+Newton.m in Sources */,
 				3F2364F71DDF606500238895 /* OrderedGroupOperation.m in Sources */,
 				3F2364F81DDF606500238895 /* URLRequestTaskOperation.m in Sources */,
@@ -322,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2DB5AF1FC7A25500593A7B /* DownloadTaskOperation.m in Sources */,
 				3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */,
 				3FE068031BC733BD00FDEB75 /* OrderedGroupOperation.m in Sources */,
 				3FE067FF1BC6D0C600FDEB75 /* URLRequestTaskOperation.m in Sources */,
@@ -381,14 +393,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -430,14 +448,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
