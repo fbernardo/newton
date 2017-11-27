@@ -12,7 +12,7 @@
 static void *KVOOerationQueueContext;
 
 @interface OperationQueue ()
-@property (nonatomic, copy) void (^allOperationsFinishedCompletionBlock)();
+@property (nonatomic, copy) void (^allOperationsFinishedCompletionBlock)(void);
 @property (nonatomic) BOOL hasFinished;
 @property (nonatomic, strong) dispatch_queue_t dispatchQueue;
 @end
@@ -68,7 +68,7 @@ static void *KVOOerationQueueContext;
 
 #pragma mark - Public Methods
 
-- (void)waitUntilAllOperationsAreFinishedWithCompletion:(void (^)())completionBlock {
+- (void)waitUntilAllOperationsAreFinishedWithCompletion:(void (^)(void))completionBlock {
     [self addCompletionBlock:completionBlock];
 }
 
@@ -95,8 +95,8 @@ static void *KVOOerationQueueContext;
     }];
 }
 
-- (void)addCompletionBlock:(void (^)())completionBlock {
-    void (^oldCompletionBlock)() = self.allOperationsFinishedCompletionBlock;
+- (void)addCompletionBlock:(void (^)(void))completionBlock {
+    void (^oldCompletionBlock)(void) = self.allOperationsFinishedCompletionBlock;
     
     if (oldCompletionBlock) {
         self.allOperationsFinishedCompletionBlock = ^{
@@ -122,7 +122,7 @@ static void *KVOOerationQueueContext;
     self.hasFinished = hasFinished;
 
     if (hasCompleted) {
-        void (^block)() = self.allOperationsFinishedCompletionBlock;
+        void (^block)(void) = self.allOperationsFinishedCompletionBlock;
         if (block) {
             block();
         }

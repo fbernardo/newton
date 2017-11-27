@@ -10,8 +10,8 @@
 
 @implementation NSOperation (Newton)
 
-- (void)addCompletionBlock:(void (^)())completionBlock {
-    void (^oldBlock)() = self.completionBlock;
+- (void)addCompletionBlock:(void (^)(void))completionBlock {
+    void (^oldBlock)(void) = self.completionBlock;
     if (oldBlock) {
         self.completionBlock = ^{
             oldBlock();

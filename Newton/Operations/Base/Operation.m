@@ -116,7 +116,7 @@ typedef NS_ENUM(NSUInteger, OperationState) {
     
     _state = OperationStateFinished;
     
-    void (^completionBlock)() = self.completionBlock;
+    void (^completionBlock)(void) = self.completionBlock;
     self.completionBlock = nil;
     if (completionBlock) {
         completionBlock();

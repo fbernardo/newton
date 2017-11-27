@@ -10,7 +10,7 @@
 #import "OperationForSubclass.h"
 
 @interface BlockOperation ()
-@property (nonatomic, copy) id (^block)();
+@property (nonatomic, copy) id (^block)(id, BlockOperationCancelHandler);
 @end
 
 @implementation BlockOperation
