@@ -26,7 +26,7 @@
 
 @interface DownloadTaskOperation ()
 @property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, strong) NSURLSessionDataTask *task;
+@property (nonatomic, strong) NSURLSessionDownloadTask *task;
 @end
 
 @implementation DownloadTaskOperation
@@ -68,9 +68,20 @@
     
     if (self.input) {
         __weak typeof(self) weakSelf = self;
-        self.task = [self.session downloadTaskWithRequest:self.input completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        self.task = [self.session downloadTaskWithRequest:self.input completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+            
             if (location && response) {
-                [weakSelf finishWithOutput:[DownloadTaskOperationResult resultWithURL:location response:response]];
+                NSURL *newLocation = [[NSFileManager defaultManager].temporaryDirectory URLByAppendingPathComponent:[NSUUID UUID].UUIDString];                
+                
+                if ([[NSFileManager defaultManager] moveItemAtURL:location
+                                                        toURL:newLocation
+                                                        error:nil
+                     ]) {                    
+                    [weakSelf finishWithOutput:[DownloadTaskOperationResult resultWithURL:newLocation response:response]];
+                } else {
+                    [weakSelf cancelWithError:[NSError errorWithDomain:@"DownloadTaskOperationResultErrorDomain" code:0 userInfo:nil]];
+                }
+                
             } else {
                 [weakSelf cancelWithError:error];
             }
