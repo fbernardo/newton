@@ -69,14 +69,15 @@
     if (self.input) {
         __weak typeof(self) weakSelf = self;
         self.task = [self.session downloadTaskWithRequest:self.input completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
-            
             if (location && response) {
-                NSURL *newLocation = [[NSFileManager defaultManager].temporaryDirectory URLByAppendingPathComponent:[NSUUID UUID].UUIDString];                
+                NSFileManager *manager = [NSFileManager defaultManager];
+                NSURL *tempDirectory = [manager.temporaryDirectory URLByAppendingPathComponent:[NSUUID UUID].UUIDString isDirectory:YES];
+                [manager createDirectoryAtURL:tempDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+                NSURL *newLocation = [tempDirectory URLByAppendingPathComponent:response.suggestedFilename ?: [NSUUID UUID].UUIDString];
                 
-                if ([[NSFileManager defaultManager] moveItemAtURL:location
-                                                        toURL:newLocation
-                                                        error:nil
-                     ]) {                    
+                if ([manager moveItemAtURL:location
+                                     toURL:newLocation
+                                     error:nil]) {
                     [weakSelf finishWithOutput:[DownloadTaskOperationResult resultWithURL:newLocation response:response]];
                 } else {
                     [weakSelf cancelWithError:[NSError errorWithDomain:@"DownloadTaskOperationResultErrorDomain" code:0 userInfo:nil]];
