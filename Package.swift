@@ -3,17 +3,23 @@
 
 import PackageDescription
 
+let packageName = "Newton"
+let productName = "Newton"
+let targetName = productName
+
 let package = Package(
-    name: "Newton",
+    name: packageName,
+    platforms: [
+        .iOS(.v16)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "Newton",
-            targets: ["Newton"]),
+        .library(name: productName, targets: [targetName]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(name: "Newton"),
+        .target(
+        	name: targetName,
+        	path: "Newton"
+        )
     ]
 )
