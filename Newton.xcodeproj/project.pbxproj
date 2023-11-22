@@ -101,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3839412B0ECB1300C07ECB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3FE067161BC6BBBB00FDEB75 /* Newton.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		3FE067091BC6BBBB00FDEB75 = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +129,9 @@
 		3FE067151BC6BBBB00FDEB75 /* Newton */ = {
 			isa = PBXGroup;
 			children = (
+				0D3839412B0ECB1300C07ECB /* include */,
 				3FE0671E1BC6BBFD00FDEB75 /* Categories */,
 				3FE067231BC6BBFD00FDEB75 /* Operations */,
-				3FE067161BC6BBBB00FDEB75 /* Newton.h */,
 				3FE067181BC6BBBB00FDEB75 /* Info.plist */,
 				3F2365171DDF60D300238895 /* Info-OSX.plist */,
 				3F7C12BB1DE36EEC00733A7F /* Newton.modulemap */,
