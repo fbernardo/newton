@@ -22,7 +22,7 @@ let package = Package(
         	path: "Newton",
         	publicHeadersPath: "include",
             cSettings: [
-                .headerSearchPath("."),
+                .headerSearchPath("Newton/**."),
             ]
         )
     ]
