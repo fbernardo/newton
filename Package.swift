@@ -20,7 +20,7 @@ let package = Package(
         .target(
         	name: targetName,
         	path: "Newton",
-        	publicHeadersPath: "include",
+        	publicHeadersPath: "include"
         )
     ]
 )
