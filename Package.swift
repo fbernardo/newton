@@ -21,9 +21,6 @@ let package = Package(
         	name: targetName,
         	path: "Newton",
         	publicHeadersPath: "include",
-            cSettings: [
-                .headerSearchPath("Newton/**."),
-            ]
         )
     ]
 )
