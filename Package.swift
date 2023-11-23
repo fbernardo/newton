@@ -19,7 +19,11 @@ let package = Package(
     targets: [
         .target(
         	name: targetName,
-        	path: "Newton"
+        	path: "Newton",
+        	publicHeadersPath: "include",
+            cSettings: [
+                .headerSearchPath("."),
+            ]
         )
     ]
 )
