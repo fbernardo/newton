@@ -10,7 +10,7 @@ let targetName = productName
 let package = Package(
     name: packageName,
     platforms: [
-        .iOS(.v16)
+        .iOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -20,7 +20,10 @@ let package = Package(
         .target(
         	name: targetName,
         	path: "Newton",
-        	publicHeadersPath: "include"
+            publicHeadersPath: "include",
+            cSettings: [
+                .headerSearchPath("include/\(targetName)")
+            ]
         )
     ]
 )

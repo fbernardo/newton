@@ -6,7 +6,7 @@
 //  Copyright © 2015 Subtraction. All rights reserved.
 //
 
-#import <Newton/Operation.h>
+#import "Operation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

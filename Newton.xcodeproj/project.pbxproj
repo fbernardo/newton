@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D9C04AD2B10B91E00361C67 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A12B10B91D00361C67 /* NSOperation+Newton.h */; };
+		0D9C04AE2B10B91E00361C67 /* NSOperationQueue+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A22B10B91D00361C67 /* NSOperationQueue+Newton.h */; };
+		0D9C04AF2B10B91E00361C67 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A32B10B91D00361C67 /* BlockOperation.h */; };
+		0D9C04B02B10B91E00361C67 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A42B10B91D00361C67 /* OperationQueue.h */; };
+		0D9C04B12B10B91E00361C67 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A52B10B91D00361C67 /* URLSessionTaskOperation.h */; };
+		0D9C04B22B10B91E00361C67 /* DownloadTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A62B10B91D00361C67 /* DownloadTaskOperation.h */; };
+		0D9C04B32B10B91E00361C67 /* OrderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A72B10B91D00361C67 /* OrderedGroupOperation.h */; };
+		0D9C04B42B10B91E00361C67 /* UnorderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A82B10B91D00361C67 /* UnorderedGroupOperation.h */; };
+		0D9C04B52B10B91E00361C67 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04A92B10B91D00361C67 /* Newton.h */; };
+		0D9C04B62B10B91E00361C67 /* Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04AA2B10B91D00361C67 /* Operation.h */; };
+		0D9C04B72B10B91E00361C67 /* URLRequestTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04AB2B10B91D00361C67 /* URLRequestTaskOperation.h */; };
+		0D9C04B82B10B91E00361C67 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9C04AC2B10B91D00361C67 /* OperationForSubclass.h */; };
 		3F2364F61DDF606500238895 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
 		3F2364F71DDF606500238895 /* OrderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */; };
 		3F2364F81DDF606500238895 /* URLRequestTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */; };
@@ -16,70 +28,46 @@
 		3F2364FC1DDF606500238895 /* BlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */; };
 		3F2364FD1DDF606500238895 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; };
 		3F2364FE1DDF606500238895 /* URLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */; };
-		3F2365011DDF606500238895 /* Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067291BC6BBFD00FDEB75 /* Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365021DDF606500238895 /* NSOperationQueue+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067211BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365031DDF606500238895 /* URLRequestTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365041DDF606500238895 /* OrderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE068001BC733BD00FDEB75 /* OrderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365051DDF606500238895 /* UnorderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067271BC6BBFD00FDEB75 /* UnorderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365061DDF606500238895 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365071DDF606500238895 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365081DDF606500238895 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2365091DDF606500238895 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F23650A1DDF606500238895 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2DB5AE1FC7A25500593A7B /* DownloadTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F2DB5AF1FC7A25500593A7B /* DownloadTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */; };
-		3F2DB5B01FC7A3CD00593A7B /* DownloadTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F2DB5DB1FC7A50500593A7B /* DownloadTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */; };
-		3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067161BC6BBBB00FDEB75 /* Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067341BC6BBFD00FDEB75 /* NSOperation+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */; };
-		3FE067351BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067211BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067361BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067221BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m */; };
-		3FE067371BC6BBFD00FDEB75 /* BlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067381BC6BBFD00FDEB75 /* BlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */; };
-		3FE067391BC6BBFD00FDEB75 /* UnorderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067271BC6BBFD00FDEB75 /* UnorderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673A1BC6BBFD00FDEB75 /* UnorderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */; };
-		3FE0673B1BC6BBFD00FDEB75 /* Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067291BC6BBFD00FDEB75 /* Operation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673C1BC6BBFD00FDEB75 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672A1BC6BBFD00FDEB75 /* Operation.m */; };
-		3FE0673D1BC6BBFD00FDEB75 /* OperationForSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE0673F1BC6BBFD00FDEB75 /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */; };
-		3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067431BC6BBFD00FDEB75 /* URLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */; };
-		3FE067FE1BC6D0C600FDEB75 /* URLRequestTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE067FF1BC6D0C600FDEB75 /* URLRequestTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */; };
-		3FE068021BC733BD00FDEB75 /* OrderedGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE068001BC733BD00FDEB75 /* OrderedGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FE068031BC733BD00FDEB75 /* OrderedGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D9C04A12B10B91D00361C67 /* NSOperation+Newton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperation+Newton.h"; sourceTree = "<group>"; };
+		0D9C04A22B10B91D00361C67 /* NSOperationQueue+Newton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+Newton.h"; sourceTree = "<group>"; };
+		0D9C04A32B10B91D00361C67 /* BlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockOperation.h; sourceTree = "<group>"; };
+		0D9C04A42B10B91D00361C67 /* OperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationQueue.h; sourceTree = "<group>"; };
+		0D9C04A52B10B91D00361C67 /* URLSessionTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionTaskOperation.h; sourceTree = "<group>"; };
+		0D9C04A62B10B91D00361C67 /* DownloadTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTaskOperation.h; sourceTree = "<group>"; };
+		0D9C04A72B10B91D00361C67 /* OrderedGroupOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedGroupOperation.h; sourceTree = "<group>"; };
+		0D9C04A82B10B91D00361C67 /* UnorderedGroupOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnorderedGroupOperation.h; sourceTree = "<group>"; };
+		0D9C04A92B10B91D00361C67 /* Newton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Newton.h; sourceTree = "<group>"; };
+		0D9C04AA2B10B91D00361C67 /* Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
+		0D9C04AB2B10B91D00361C67 /* URLRequestTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestTaskOperation.h; sourceTree = "<group>"; };
+		0D9C04AC2B10B91D00361C67 /* OperationForSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationForSubclass.h; sourceTree = "<group>"; };
 		3F2365101DDF606500238895 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2365171DDF60D300238895 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
-		3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTaskOperation.h; sourceTree = "<group>"; };
 		3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTaskOperation.m; sourceTree = "<group>"; };
 		3F7C12BB1DE36EEC00733A7F /* Newton.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Newton.modulemap; sourceTree = "<group>"; };
 		3FE067131BC6BBBB00FDEB75 /* Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FE067161BC6BBBB00FDEB75 /* Newton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Newton.h; sourceTree = "<group>"; };
 		3FE067181BC6BBBB00FDEB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperation+Newton.h"; sourceTree = "<group>"; };
 		3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperation+Newton.m"; sourceTree = "<group>"; };
-		3FE067211BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+Newton.h"; sourceTree = "<group>"; };
 		3FE067221BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+Newton.m"; sourceTree = "<group>"; };
-		3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockOperation.h; sourceTree = "<group>"; };
 		3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockOperation.m; sourceTree = "<group>"; };
-		3FE067271BC6BBFD00FDEB75 /* UnorderedGroupOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnorderedGroupOperation.h; sourceTree = "<group>"; };
 		3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnorderedGroupOperation.m; sourceTree = "<group>"; };
-		3FE067291BC6BBFD00FDEB75 /* Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
 		3FE0672A1BC6BBFD00FDEB75 /* Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operation.m; sourceTree = "<group>"; };
-		3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationForSubclass.h; sourceTree = "<group>"; };
-		3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationQueue.h; sourceTree = "<group>"; };
 		3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationQueue.m; sourceTree = "<group>"; };
-		3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionTaskOperation.h; sourceTree = "<group>"; };
 		3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionTaskOperation.m; sourceTree = "<group>"; };
-		3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestTaskOperation.h; sourceTree = "<group>"; };
 		3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRequestTaskOperation.m; sourceTree = "<group>"; };
-		3FE068001BC733BD00FDEB75 /* OrderedGroupOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedGroupOperation.h; sourceTree = "<group>"; };
 		3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedGroupOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,9 +92,28 @@
 		0D3839412B0ECB1300C07ECB /* include */ = {
 			isa = PBXGroup;
 			children = (
-				3FE067161BC6BBBB00FDEB75 /* Newton.h */,
+				0D9C04A02B10B91D00361C67 /* Newton */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		0D9C04A02B10B91D00361C67 /* Newton */ = {
+			isa = PBXGroup;
+			children = (
+				0D9C04A32B10B91D00361C67 /* BlockOperation.h */,
+				0D9C04A62B10B91D00361C67 /* DownloadTaskOperation.h */,
+				0D9C04A92B10B91D00361C67 /* Newton.h */,
+				0D9C04A12B10B91D00361C67 /* NSOperation+Newton.h */,
+				0D9C04A22B10B91D00361C67 /* NSOperationQueue+Newton.h */,
+				0D9C04AA2B10B91D00361C67 /* Operation.h */,
+				0D9C04AC2B10B91D00361C67 /* OperationForSubclass.h */,
+				0D9C04A42B10B91D00361C67 /* OperationQueue.h */,
+				0D9C04A72B10B91D00361C67 /* OrderedGroupOperation.h */,
+				0D9C04A82B10B91D00361C67 /* UnorderedGroupOperation.h */,
+				0D9C04AB2B10B91D00361C67 /* URLRequestTaskOperation.h */,
+				0D9C04A52B10B91D00361C67 /* URLSessionTaskOperation.h */,
+			);
+			path = Newton;
 			sourceTree = "<group>";
 		};
 		3FE067091BC6BBBB00FDEB75 = {
@@ -142,9 +149,7 @@
 		3FE0671E1BC6BBFD00FDEB75 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				3FE0671F1BC6BBFD00FDEB75 /* NSOperation+Newton.h */,
 				3FE067201BC6BBFD00FDEB75 /* NSOperation+Newton.m */,
-				3FE067211BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h */,
 				3FE067221BC6BBFD00FDEB75 /* NSOperationQueue+Newton.m */,
 			);
 			path = Categories;
@@ -162,16 +167,10 @@
 		3FE067241BC6BBFD00FDEB75 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				3FE067251BC6BBFD00FDEB75 /* BlockOperation.h */,
 				3FE067261BC6BBFD00FDEB75 /* BlockOperation.m */,
-				3FE067271BC6BBFD00FDEB75 /* UnorderedGroupOperation.h */,
 				3FE067281BC6BBFD00FDEB75 /* UnorderedGroupOperation.m */,
-				3FE068001BC733BD00FDEB75 /* OrderedGroupOperation.h */,
 				3FE068011BC733BD00FDEB75 /* OrderedGroupOperation.m */,
-				3FE067291BC6BBFD00FDEB75 /* Operation.h */,
 				3FE0672A1BC6BBFD00FDEB75 /* Operation.m */,
-				3FE0672B1BC6BBFD00FDEB75 /* OperationForSubclass.h */,
-				3FE0672C1BC6BBFD00FDEB75 /* OperationQueue.h */,
 				3FE0672D1BC6BBFD00FDEB75 /* OperationQueue.m */,
 			);
 			path = Base;
@@ -180,11 +179,8 @@
 		3FE0672E1BC6BBFD00FDEB75 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				3FE067311BC6BBFD00FDEB75 /* URLSessionTaskOperation.h */,
 				3FE067321BC6BBFD00FDEB75 /* URLSessionTaskOperation.m */,
-				3F2DB5AC1FC7A25500593A7B /* DownloadTaskOperation.h */,
 				3F2DB5AD1FC7A25500593A7B /* DownloadTaskOperation.m */,
-				3FE067FC1BC6D0C600FDEB75 /* URLRequestTaskOperation.h */,
 				3FE067FD1BC6D0C600FDEB75 /* URLRequestTaskOperation.m */,
 			);
 			path = Extra;
@@ -197,18 +193,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F2365011DDF606500238895 /* Operation.h in Headers */,
-				3F2365021DDF606500238895 /* NSOperationQueue+Newton.h in Headers */,
-				3F2365031DDF606500238895 /* URLRequestTaskOperation.h in Headers */,
-				3F2365041DDF606500238895 /* OrderedGroupOperation.h in Headers */,
-				3F2365051DDF606500238895 /* UnorderedGroupOperation.h in Headers */,
-				3F2DB5B01FC7A3CD00593A7B /* DownloadTaskOperation.h in Headers */,
-				3F2365061DDF606500238895 /* NSOperation+Newton.h in Headers */,
-				3F2365071DDF606500238895 /* URLSessionTaskOperation.h in Headers */,
-				3F2365081DDF606500238895 /* OperationQueue.h in Headers */,
-				3F2365091DDF606500238895 /* BlockOperation.h in Headers */,
-				3F23650A1DDF606500238895 /* Newton.h in Headers */,
-				3F23650B1DDF606500238895 /* OperationForSubclass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,18 +200,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE0673B1BC6BBFD00FDEB75 /* Operation.h in Headers */,
-				3FE067351BC6BBFD00FDEB75 /* NSOperationQueue+Newton.h in Headers */,
-				3FE067FE1BC6D0C600FDEB75 /* URLRequestTaskOperation.h in Headers */,
-				3FE068021BC733BD00FDEB75 /* OrderedGroupOperation.h in Headers */,
-				3FE067391BC6BBFD00FDEB75 /* UnorderedGroupOperation.h in Headers */,
-				3F2DB5AE1FC7A25500593A7B /* DownloadTaskOperation.h in Headers */,
-				3FE067331BC6BBFD00FDEB75 /* NSOperation+Newton.h in Headers */,
-				3FE067421BC6BBFD00FDEB75 /* URLSessionTaskOperation.h in Headers */,
-				3FE0673E1BC6BBFD00FDEB75 /* OperationQueue.h in Headers */,
-				3FE067371BC6BBFD00FDEB75 /* BlockOperation.h in Headers */,
-				3FE067171BC6BBBB00FDEB75 /* Newton.h in Headers */,
-				3FE0673D1BC6BBFD00FDEB75 /* OperationForSubclass.h in Headers */,
+				0D9C04B42B10B91E00361C67 /* UnorderedGroupOperation.h in Headers */,
+				0D9C04B62B10B91E00361C67 /* Operation.h in Headers */,
+				0D9C04B52B10B91E00361C67 /* Newton.h in Headers */,
+				0D9C04AE2B10B91E00361C67 /* NSOperationQueue+Newton.h in Headers */,
+				0D9C04B12B10B91E00361C67 /* URLSessionTaskOperation.h in Headers */,
+				0D9C04B32B10B91E00361C67 /* OrderedGroupOperation.h in Headers */,
+				0D9C04B82B10B91E00361C67 /* OperationForSubclass.h in Headers */,
+				0D9C04AD2B10B91E00361C67 /* NSOperation+Newton.h in Headers */,
+				0D9C04B02B10B91E00361C67 /* OperationQueue.h in Headers */,
+				0D9C04AF2B10B91E00361C67 /* BlockOperation.h in Headers */,
+				0D9C04B72B10B91E00361C67 /* URLRequestTaskOperation.h in Headers */,
+				0D9C04B22B10B91E00361C67 /* DownloadTaskOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

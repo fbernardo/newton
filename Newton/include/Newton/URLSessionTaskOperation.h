@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Newton/Operation.h>
+#import "Operation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
